@@ -6,11 +6,6 @@ const nextConfig = {
   reactStrictMode: true,
   output: 'export',
   swcMinify: true,
-  distDir: 'docs',
-
-  basePath: isProd ? `/${repo}` : '',
-  assetPrefix: isProd ? `/${repo}/` : '',
-
   images: {
     unoptimized: true,
   },

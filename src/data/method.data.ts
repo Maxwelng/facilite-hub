@@ -10,7 +10,7 @@ export interface MethodPillar {
 export const methodPillars: MethodPillar[] = [
   {
     id: 'ESSÊNCIA DA ROTINA',
-    title: 'Organização prática para um crescimento leve',
+    title: 'ORGANIZAÇÃO PRÁTICA PARA UM CRESCIMENTO LEVE',
     subtitle: 'Eu assumo as tarefas que te sobrecarregam e te prendem no operacional:',
     description: '',
     footer: 'Mais previsibilidade, clareza e tempo real para liderar o seu negócio sem viver apagando incêndios.',

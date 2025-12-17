@@ -24,9 +24,10 @@ export const Method: React.FC<MethodProps> = () => {
         <div style={{ textAlign: 'center' }}>
           <p style={{
             fontFamily: theme.fonts.heading,
-            fontSize: '2.9rem',
+            fontSize: '2.0rem',
             letterSpacing: '2px',
             marginBottom: '1rem',
+            fontStyle: 'italic',
             opacity: 0.9,
             fontWeight:600
           }}>
@@ -34,9 +35,8 @@ export const Method: React.FC<MethodProps> = () => {
           </p>
           <h2 style={{
             fontFamily: theme.fonts.cinzel,
-            fontSize: 'clamp(2.5rem, 6vw, 4rem)',
+            fontSize: 'clamp(4.0rem, 12vw, 8rem)',
             marginBottom: '1rem',
-            fontStyle: 'italic',
             fontWeight: 400
 
           }}>
@@ -106,9 +106,8 @@ export const Method: React.FC<MethodProps> = () => {
                       id={`pillar-title-${pillar.id}`}
                       style={{
                         fontFamily: theme.fonts.montserrat,
-                        fontSize: '1.3rem',
+                        fontSize: '1.1rem',
                         margin: 0,
-                        fontStyle: 'italic',
                         color: theme.colors.text.light,
                         fontWeight: 500
                       }}
@@ -146,7 +145,7 @@ export const Method: React.FC<MethodProps> = () => {
                       style={{
                         fontFamily: theme.fonts.montserrat,
                         fontSize: '0.95rem',
-                        lineHeight: 3.7,
+                        lineHeight: isMobile ? 1.7 : 3.7,
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'flex-start',
@@ -157,7 +156,7 @@ export const Method: React.FC<MethodProps> = () => {
                       }}
                     >
                       {pillar.listContent?.map((item, index) => (
-                        <li key={index} style={{ marginBottom: '0.5rem' }}>
+                        <li key={index} style={{ marginBottom: '0.5rem', textAlign: isMobile ? 'left' : 'center' }}>
                           {item}
                         </li>
                       ))}

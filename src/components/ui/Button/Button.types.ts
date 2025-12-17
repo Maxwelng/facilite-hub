@@ -4,4 +4,5 @@ export interface ButtonProps {
   variant?: 'primary' | 'secondary';
   size?: 'small' | 'medium' | 'large';
   disabled?: boolean;
+  marginLeft?: string;
 }

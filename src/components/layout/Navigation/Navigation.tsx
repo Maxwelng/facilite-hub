@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { NavigationProps } from './Navigation.types';
 import { useScroll } from '@/hooks/useScroll';
@@ -12,7 +12,13 @@ export const Navigation: React.FC<NavigationProps> = () => {
   const [isOpen, setIsOpen] = useState(false);
   const scrolled = useScroll(50);
   const { scrollToSection } = useNavigation();
-
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const checkSize = () => setIsMobile(window.innerWidth < 900);
+    checkSize();
+    window.addEventListener('resize', checkSize);
+    return () => window.removeEventListener('resize', checkSize);
+  }, []);
   const handleNavClick = (href: string) => {
     scrollToSection(href);
     setIsOpen(false);
@@ -36,7 +42,7 @@ export const Navigation: React.FC<NavigationProps> = () => {
       <div style={{ maxWidth: '1400px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <h1 style={{
           fontFamily: theme.fonts.cinzel,
-          fontSize: '2.5rem',
+          fontSize: isMobile ? '1.9rem' : '2.5rem',
           color: theme.colors.primary,
           margin: 0,
           letterSpacing: '2px'

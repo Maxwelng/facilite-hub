@@ -37,10 +37,10 @@ export const HowItWorks: React.FC<HowItWorksProps> = () => {
         }}
       >
         <Image
-          src={isMobile ? "/CF-mobile-bg.png" : "/como-funciona-bg.png"}
+          src={isMobile ? "/como-funciona-bg-full.png" : "/como-funciona-bg.png"}
           alt="Profissional explicando como funciona o serviço"
           fill
-          style={{ objectFit: 'cover', zIndex: 0, position: 'absolute', top: 0, bottom: 0 }}
+          style={{ objectFit: 'cover', zIndex: 0, position: 'absolute', top: 0, bottom: 0, backgroundPosition: 'right', backgroundSize:'cover', objectPosition: 'right' }}
           priority={false}
         />
 
@@ -48,7 +48,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = () => {
           style={{
             position: 'relative',
             zIndex: 2,
-            padding: '6rem 2rem',
+            padding: isMobile ? '3rem 1rem' : '6rem 2rem',
           }}
         >
           <Container>
@@ -135,7 +135,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = () => {
                   Também desenvolvemos um plano totalmente personalizado, alinhado às necessidades e ao momento da sua empresa.
                 </p>
 
-                <Button variant="primary" size="medium" onClick={handleContactClick}>
+                <Button variant="primary" size="medium" onClick={handleContactClick} marginLeft={'1.2rem'}  >
                   Eu quero agendar uma conversa!
                 </Button>
               </div>

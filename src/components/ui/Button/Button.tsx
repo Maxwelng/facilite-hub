@@ -8,6 +8,7 @@ export const Button: React.FC<ButtonProps> = ({
   variant = 'primary',
   size = 'medium',
   disabled = false,
+  marginLeft
 }) => {
   const styles: React.CSSProperties = {
     backgroundColor: variant === 'primary' ? theme.colors.primary : theme.colors.secondary,
@@ -22,6 +23,7 @@ export const Button: React.FC<ButtonProps> = ({
     transition: 'all 0.3s ease',
     boxShadow: theme.shadows.md,
     opacity: disabled ? 0.6 : 1,
+    marginLeft: marginLeft
   };
 
   return (

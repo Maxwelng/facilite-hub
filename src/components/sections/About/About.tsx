@@ -83,6 +83,7 @@ export const About: React.FC<AboutProps> = () => {
             backgroundImage: 'url("/about-bg.png")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
+            backgroundColor: theme.colors.primary,
             color: theme.colors.white,
             padding: '4rem 3rem',
             borderRadius: '10px',
@@ -175,7 +176,6 @@ export const About: React.FC<AboutProps> = () => {
               fontSize: 'clamp(1.5rem, 3vw, 2rem)',
               color: theme.colors.primary,
               marginBottom: '2rem',
-              fontStyle: 'italic',
               fontWeight: 700
             }}>
               Mas vamos ser realistas?

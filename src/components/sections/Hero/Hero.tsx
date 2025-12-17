@@ -94,7 +94,7 @@ export const Hero: React.FC<HeroProps> = () => {
               style={{
                 position: 'absolute',
                 bottom: isMobile ? '-36px' : 0,
-                right: 0,
+                right: '-22px',
                 width: '45%',
                 display: 'flex',
                 justifyContent: 'flex-end',

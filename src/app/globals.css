@@ -1,42 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Chilanka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-playfair: 'Playfair Display', serif;
+  --font-inter: 'Inter', 'Poppins', sans-serif;
+  --font-chilanka: 'Chilanka', cursive;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-cinzel: 'Cinzel', serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html,
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  max-width: 100vw;
+  font-family: var(--font-inter);
   overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3) !important;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+  color: inherit;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+a:hover {
+  color: #34495E;
+}
+
+/* Desktop Navigation */
+@media (min-width: 769px) {
+  .desktop-nav {
+    display: flex !important;
+  }
+}
+
+/* Mobile Menu Button */
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: block !important;
+  }
+  
+  .hero-grid,
+  .reality-grid,
+  .how-grid,
+  .founder-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .values-timeline {
+    width: 280px !important;
+    height: 280px !important;
+  }
+  
+  .value-item {
+    position: static !important;
+    transform: none !important;
+    margin: 1.5rem auto !important;
+    width: 90% !important;
+    max-width: 300px !important;
+    text-align: center !important;
   }
 }

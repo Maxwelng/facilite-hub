@@ -106,7 +106,7 @@ export const Method: React.FC<MethodProps> = () => {
                       id={`pillar-title-${pillar.id}`}
                       style={{
                         fontFamily: theme.fonts.montserrat,
-                        fontSize: '1.1rem',
+                        fontSize: '1.0rem',
                         margin: 0,
                         color: theme.colors.text.light,
                         fontWeight: 500

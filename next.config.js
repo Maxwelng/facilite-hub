@@ -1,13 +1,22 @@
+const isProd = process.env.NODE_ENV === 'production';
+const repo = 'facilite-hub';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  output: 'export',
   swcMinify: true,
+  distDir: 'docs',
+
+  basePath: isProd ? `/${repo}` : '',
+  assetPrefix: isProd ? `/${repo}/` : '',
+
   images: {
-    domains: [],
-    formats: ['image/webp', 'image/avif'],
+    unoptimized: true,
   },
+
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
+    removeConsole: isProd,
   },
 };
 

@@ -6,6 +6,7 @@ import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
 import { theme } from '@/styles/theme';
 import Image from 'next/image';
+import { siteConfig } from '@/config/site.config';
 
 export const Contact: React.FC<ContactProps> = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -16,6 +17,10 @@ export const Contact: React.FC<ContactProps> = () => {
     window.addEventListener('resize', checkSize);
     return () => window.removeEventListener('resize', checkSize);
   }, []);
+
+  function handleContactClick() {
+    window.open(`https://wa.me/${siteConfig.contact.whatsapp}`, '_blank');
+  }
 
   return (
     <section id="contato">
@@ -103,7 +108,7 @@ export const Contact: React.FC<ContactProps> = () => {
                 A escolha agora é sua.
               </p>
 
-              <Button size="medium">Eu quero agendar uma conversa!</Button>
+              <Button size="medium" onClick={handleContactClick}>Eu quero agendar uma conversa!</Button>
             </div>
 
           </div>

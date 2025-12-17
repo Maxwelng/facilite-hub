@@ -6,6 +6,7 @@ import { ValuesTimeline } from '@/components/ui/ValuesTimeline';
 import { theme } from '@/styles/theme';
 import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
+import { siteConfig } from '@/config/site.config';
 
 const steps = [
   'Apenas um pilar;',
@@ -15,6 +16,9 @@ const steps = [
 
 export const HowItWorks: React.FC<HowItWorksProps> = () => {
   const [isMobile, setIsMobile] = useState(false);
+  function handleContactClick() {
+      window.open(`https://wa.me/${siteConfig.contact.whatsapp}`, '_blank');
+    }
 
   useEffect(() => {
     const checkSize = () => setIsMobile(window.innerWidth < 900);
@@ -131,7 +135,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = () => {
                   Também desenvolvemos um plano totalmente personalizado, alinhado às necessidades e ao momento da sua empresa.
                 </p>
 
-                <Button variant="primary" size="medium">
+                <Button variant="primary" size="medium" onClick={handleContactClick}>
                   Eu quero agendar uma conversa!
                 </Button>
               </div>
@@ -167,7 +171,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = () => {
                     Como funciona?
                   </h2>
 
-                  <Button variant="primary" size="medium">
+                  <Button variant="primary" size="medium" onClick={handleContactClick}>
                     Eu quero agendar uma conversa!
                   </Button>
                 </div>

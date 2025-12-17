@@ -29,7 +29,7 @@ export const About: React.FC<AboutProps> = () => {
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
           <h3 style={{
             fontFamily: theme.fonts.montserrat,
-            fontSize: 'clamp(1.8rem, 4vw, 2.5rem)',
+            fontSize: 'clamp(1.7rem, 4vw, 2.5rem)',
             color: theme.colors.primary,
             marginBottom: '1.5rem',
             textTransform: 'uppercase',
@@ -55,7 +55,7 @@ export const About: React.FC<AboutProps> = () => {
         <div style={{ textAlign: 'center', padding: '4rem 0', marginBottom: '4rem' }}>
           <h3 style={{
             fontFamily: theme.fonts.montserrat,
-            fontSize: 'clamp(1.8rem, 4vw, 2.5rem)',
+            fontSize: 'clamp(1.7rem, 4vw, 2.5rem)',
             color: theme.colors.primary,
             marginBottom: '1.5rem',
             textTransform: 'uppercase',

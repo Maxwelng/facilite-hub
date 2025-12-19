@@ -62,7 +62,7 @@ export const Contact: React.FC<ContactProps> = () => {
             >
               <Image
                 src="/camila-ventura.png"
-                alt="Foto da fundadora Camila Ventura"
+                alt="Foto da fundadora da empresa Facilite Hub Camila Ventura"
                 width={isMobile ? 280 : 400}
                 height={isMobile ? 420 : 600}
                 style={{

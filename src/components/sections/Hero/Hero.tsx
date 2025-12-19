@@ -104,7 +104,7 @@ export const Hero: React.FC<HeroProps> = () => {
             >
               <Image
                 src="/mask-hero.png"
-                alt="Descrição"
+                alt="Camila Ventura sorrindo e apoiada em uma mesa com um notebook na empresa Facilite Hub"
                 width={180}
                 height={300}
                 style={{
@@ -169,7 +169,7 @@ export const Hero: React.FC<HeroProps> = () => {
             >
               <Image
                 src="/mask-hero.png"
-                alt="Descrição"
+                alt="Camila Ventura sorrindo e apoiada em uma mesa com um notebook na empresa Facilite Hub"
                 width={326.21}
                 height={534.77}
                 style={{

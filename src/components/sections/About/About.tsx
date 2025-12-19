@@ -223,7 +223,7 @@ export const About: React.FC<AboutProps> = () => {
           >
             <Image
               src="/about-bg2.png"
-              alt="Profissional multitarefa usando notebook e celular"
+              alt="Camila ventura organizando tarefas da Facilite Hub"
               width={542.22}
               height={406}
               style={{ objectFit: 'cover', width: '100%', height: '100%' }}

@@ -24,7 +24,7 @@ export const ValuesTimeline = () => {
       <div style={{ margin: '0 auto' }}>
         <img
           src={isMobile ? '/timeline-desktop.png' : '/timeline-desktop.png'}
-          alt="Nossos valores"
+          alt="Valores que importam para a Facilite Hub"
           style={{
             width:  '100%',   // maior no mobile
             height: 'auto',
